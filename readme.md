@@ -43,3 +43,8 @@ title.propTypes: string
 - like see < const [initialstate, initialstatechanged] = useState("Here this string is default value of initialstate, its may be string, int, float, boolean, object etc.") >
 - we can change initialstatechanged manually like < initialstatechanged("here the something that u
 want to change") >
+
+## Adding Logic in UtilsText
+- we add one more button for lowercase text.
+- adding preview for text that we paste/enter.
+- count word in string, count character in string and return how many time(minutes) for no of words to read in minutes
