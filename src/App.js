@@ -1,12 +1,12 @@
-// import logo from './logo.svg';
-import "./App.css";
 import Navbar from "./components/Navbar";
+import Textform from "./components/Textform";
 
 function App() {
   return (
     <>
-      {/* <Navbar title= "TextUtils2" about= "Disabled1" />       */}
-      <Navbar />
+      <Navbar title="UsingProp" about="Disabled1" />
+      {/* <Navbar/> default poperty getting */}
+      <Textform heading="Enter Text to Analyze Below"/>
     </>
   );
 }
