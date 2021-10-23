@@ -48,3 +48,6 @@ want to change") >
 - we add one more button for lowercase text.
 - adding preview for text that we paste/enter.
 - count word in string, count character in string and return how many time(minutes) for no of words to read in minutes
+
+## In Excercise1
+- i add copy to clipboard system in our web application
