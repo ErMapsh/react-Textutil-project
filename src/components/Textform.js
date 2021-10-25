@@ -5,6 +5,13 @@ export default function Textform(props) {
   const [text, setText] = useState("");
   // setText("this is new text"); like that we can change state of const
 
+
+  const HandleOnChange = (event) => {
+    console.log("On Change");
+    setText(event.target.value);
+  };
+
+  //for uppercase
   const handleUpClick = (event) => {
     setText("You have clicked on handleUpClick");
     let Upcase = text.toUpperCase();
@@ -13,12 +20,16 @@ export default function Textform(props) {
     // console.log(event)
   };
 
+
+  //for lowercase
   const handleUpClickLower = (event) => {
     setText("You have clicked on handleUpClick");
     let Lowercase = text.toLowerCase();
     setText(Lowercase);
   };
-  const handleUpClearClick = (event) => {
+  
+  // clear text 
+  const ClearText = (event) => {
     setText("You have clicked on handleUpClick");
     let Lowercase = "";
     setText(Lowercase);
@@ -29,10 +40,25 @@ export default function Textform(props) {
     navigator.clipboard.writeText(text);
   };
 
-  const HandleOnChange = (event) => {
-    console.log("On Change");
-    setText(event.target.value);
-  };
+  //Remove Extra Spaces
+  const RemoveExtraSpaces = ()=>{
+    let newText = text.split(/[ ]+/)
+    // console.log(newText)
+    setText(newText.join(" "))
+  }
+
+  //reverse the string
+  const Reversethestring = ()=>{
+    let splitString  = text.split("");
+    let reverseArray = splitString.reverse();
+    let joinarray = reverseArray.join("");
+    setText(joinarray)
+  }
+
+
+  
+
+//jsx start
 
   return (
     <>
@@ -47,18 +73,12 @@ export default function Textform(props) {
             onChange={HandleOnChange}
           />
         </div>
-        <button className="btn btn-primary mx-2" onClick={handleUpClick}>
-          Convert to Uppercase
-        </button>
-        <button className="btn btn-primary mx-2" onClick={handleUpClickLower}>
-          Convert to Lowercase
-        </button>
-        <button className="btn btn-primary mx-2" onClick={handleUpClearClick}>
-          Clear Text
-        </button>
-        <button className="btn btn-primary mx-2" onClick={CopyToClickBoard}>
-          Copy To click board
-        </button>
+        <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to Uppercase</button>
+        <button className="btn btn-primary mx-2" onClick={handleUpClickLower}>Convert to Lowercase</button>
+        <button className="btn btn-primary mx-2" onClick={ClearText}>Clear Text</button>
+        <button className="btn btn-primary mx-2" onClick={CopyToClickBoard}>Copy To click board</button>
+        <button className="btn btn-primary mx-2" onClick={RemoveExtraSpaces}>Remove Extra Spaces</button>
+        <button className="btn btn-primary mx-2" onClick={Reversethestring}>Reverse The String </button>
       </div>
 
       <div className="container my-3">
@@ -67,7 +87,7 @@ export default function Textform(props) {
 
         <h2>What we copy:</h2>
         <p>{text}</p>
-        
+
         <h4>Your Text Summary:</h4>
         <p>
           {text.split(" ").length} words and {text.length} characters
@@ -78,8 +98,6 @@ export default function Textform(props) {
           We can read {text.split(" ").length} words in
           {text.split(" ").length * 0.008} Minutes
         </p>
-
-        
       </div>
     </>
   );

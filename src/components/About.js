@@ -107,9 +107,9 @@ export default function About() {
             </div>
             <button type="button" className="btn btn-primary my-3" onClick={darkModeEnableDisable}>{btntext}</button>
 
-            <div class="form-check form-switch" onClick={darkModeEnableDisable} >
-                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" />
-                <label class="form-check-label" for="flexSwitchCheckDefault">{button}</label>
+            <div className="form-check form-switch" onClick={darkModeEnableDisable} >
+                <input className="form-check-input" type="checkbox" role="switch" idname="flexSwitchCheckDefault" />
+                <label className="form-check-label" forhtml="flexSwitchCheckDefault">{button}</label>
             </div>
         </div>
     );
