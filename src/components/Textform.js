@@ -25,11 +25,10 @@ export default function Textform(props) {
   };
 
   //excercise stuff
-  const CopyToClickBoard = () => { 
-    navigator.clipboard.writeText(text); 
-  }
+  const CopyToClickBoard = () => {
+    navigator.clipboard.writeText(text);
+  };
 
-  
   const HandleOnChange = (event) => {
     console.log("On Change");
     setText(event.target.value);
@@ -63,10 +62,13 @@ export default function Textform(props) {
       </div>
 
       <div className="container my-3">
-        <h2>Preview</h2>
+        <h2>Preview:</h2>
         <p>{text}</p>
 
-        <h4>Your Text Summary</h4>
+        <h2>What we copy:</h2>
+        <p>{text}</p>
+        
+        <h4>Your Text Summary:</h4>
         <p>
           {text.split(" ").length} words and {text.length} characters
         </p>
@@ -77,8 +79,7 @@ export default function Textform(props) {
           {text.split(" ").length * 0.008} Minutes
         </p>
 
-        <h2>What we copy</h2> 
-        <p>{text}</p>
+        
       </div>
     </>
   );

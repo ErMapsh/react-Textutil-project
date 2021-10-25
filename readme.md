@@ -51,3 +51,4 @@ want to change") >
 
 ## In Excercise1
 - i add copy to clipboard system in our web application
+- using state varible (type of hook) we can develop a web app
