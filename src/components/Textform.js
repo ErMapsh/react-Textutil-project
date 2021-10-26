@@ -5,7 +5,6 @@ export default function Textform(props) {
   const [text, setText] = useState("");
   // setText("this is new text"); like that we can change state of const
 
-
   const HandleOnChange = (event) => {
     console.log("On Change");
     setText(event.target.value);
@@ -20,15 +19,14 @@ export default function Textform(props) {
     // console.log(event)
   };
 
-
   //for lowercase
   const handleUpClickLower = (event) => {
     setText("You have clicked on handleUpClick");
     let Lowercase = text.toLowerCase();
     setText(Lowercase);
   };
-  
-  // clear text 
+
+  // clear text
   const ClearText = (event) => {
     setText("You have clicked on handleUpClick");
     let Lowercase = "";
@@ -41,52 +39,62 @@ export default function Textform(props) {
   };
 
   //Remove Extra Spaces
-  const RemoveExtraSpaces = ()=>{
-    let newText = text.split(/[ ]+/)
+  const RemoveExtraSpaces = () => {
+    let newText = text.split(/[ ]+/);
     // console.log(newText)
-    setText(newText.join(" "))
-  }
+    setText(newText.join(" "));
+  };
 
   //reverse the string
-  const Reversethestring = ()=>{
-    let splitString  = text.split("");
+  const Reversethestring = () => {
+    let splitString = text.split("");
     let reverseArray = splitString.reverse();
     let joinarray = reverseArray.join("");
-    setText(joinarray)
-  }
+    setText(joinarray);
+  };
 
-
-  
-
-//jsx start
+  //jsx start
 
   return (
-    <>
-      <div className="container my-3">
+    <div className={`bg-${props.mode}`}>
+      <div className={`container py-3`}>
         <h1>{props.heading}</h1>
         <div className="mb-3">
           <textarea
             className="form-control"
             id="exampleFormControlTextarea1"
+            style={{backgroundColor: props.mode === "dark"? 'white':'#bdbdbd'}}
             rows={10}
             value={text}
             onChange={HandleOnChange}
           />
         </div>
-        <button className="btn btn-primary mx-2" onClick={handleUpClick}>Convert to Uppercase</button>
-        <button className="btn btn-primary mx-2" onClick={handleUpClickLower}>Convert to Lowercase</button>
-        <button className="btn btn-primary mx-2" onClick={ClearText}>Clear Text</button>
-        <button className="btn btn-primary mx-2" onClick={CopyToClickBoard}>Copy To click board</button>
-        <button className="btn btn-primary mx-2" onClick={RemoveExtraSpaces}>Remove Extra Spaces</button>
-        <button className="btn btn-primary mx-2" onClick={Reversethestring}>Reverse The String </button>
+        <button className="btn btn-primary mx-2" onClick={handleUpClick}>
+          Convert to Uppercase
+        </button>
+        <button className="btn btn-primary mx-2" onClick={handleUpClickLower}>
+          Convert to Lowercase
+        </button>
+        <button className="btn btn-primary mx-2" onClick={ClearText}>
+          Clear Text
+        </button>
+        <button className="btn btn-primary mx-2" onClick={CopyToClickBoard}>
+          Copy To click board
+        </button>
+        <button className="btn btn-primary mx-2" onClick={RemoveExtraSpaces}>
+          Remove Extra Spaces
+        </button>
+        <button className="btn btn-primary mx-2" onClick={Reversethestring}>
+          Reverse The String{" "}
+        </button>
       </div>
 
       <div className="container my-3">
         <h2>Preview:</h2>
-        <p>{text}</p>
+        <p>{text.length > 0 ? text : "Enter Your text to preview"}</p>
 
         <h2>What we copy:</h2>
-        <p>{text}</p>
+        <p>{text.length > 0 ? text : "Enter Your text to see, what we copeid"}</p>
 
         <h4>Your Text Summary:</h4>
         <p>
@@ -99,6 +107,6 @@ export default function Textform(props) {
           {text.split(" ").length * 0.008} Minutes
         </p>
       </div>
-    </>
+    </div>
   );
 }
