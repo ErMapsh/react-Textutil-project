@@ -15,6 +15,7 @@ export default function Textform(props) {
     setText("You have clicked on handleUpClick");
     let Upcase = text.toUpperCase();
     setText(Upcase);
+    props.showAlert("Converted to uppercase", "success")
     // console.log(`Uppercase was Clicked ${text}`);
     // console.log(event)
   };
@@ -24,6 +25,7 @@ export default function Textform(props) {
     setText("You have clicked on handleUpClick");
     let Lowercase = text.toLowerCase();
     setText(Lowercase);
+    props.showAlert("Converted to lowercase", "success")
   };
 
   // clear text
@@ -31,11 +33,13 @@ export default function Textform(props) {
     setText("You have clicked on handleUpClick");
     let Lowercase = "";
     setText(Lowercase);
+    props.showAlert("Cleared Text", "success")
   };
 
   //excercise stuff
   const CopyToClickBoard = () => {
     navigator.clipboard.writeText(text);
+    props.showAlert("Copied Text", "success")
   };
 
   //Remove Extra Spaces
@@ -43,6 +47,7 @@ export default function Textform(props) {
     let newText = text.split(/[ ]+/);
     // console.log(newText)
     setText(newText.join(" "));
+    props.showAlert("Remove Extra spaces", "success")
   };
 
   //reverse the string
@@ -51,6 +56,7 @@ export default function Textform(props) {
     let reverseArray = splitString.reverse();
     let joinarray = reverseArray.join("");
     setText(joinarray);
+    props.showAlert("Reverse The string", "success")
   };
 
   //jsx start
@@ -61,6 +67,7 @@ export default function Textform(props) {
         <h1>{props.heading}</h1>
         <div className="mb-3">
           <textarea
+
             className="form-control"
             id="exampleFormControlTextarea1"
             style={{backgroundColor: props.mode === "dark"? 'white':'#bdbdbd'}}
