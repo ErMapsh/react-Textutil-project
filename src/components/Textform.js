@@ -67,7 +67,7 @@ export default function Textform(props) {
         <h1>{props.heading}</h1>
         <div className="mb-3">
           <textarea
-
+            
             className="form-control"
             id="exampleFormControlTextarea1"
             style={{backgroundColor: props.mode === "dark"? 'white':'#bdbdbd'}}
@@ -76,22 +76,22 @@ export default function Textform(props) {
             onChange={HandleOnChange}
           />
         </div>
-        <button className="btn btn-primary mx-2" onClick={handleUpClick}>
+        <button className={`btn btn-${props.buttoncolor} mx-2`} onClick={handleUpClick}>
           Convert to Uppercase
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleUpClickLower}>
+        <button className={`btn btn-${props.buttoncolor} mx-2`} onClick={handleUpClickLower}>
           Convert to Lowercase
         </button>
-        <button className="btn btn-primary mx-2" onClick={ClearText}>
+        <button className={`btn btn-${props.buttoncolor} mx-2`} onClick={ClearText}>
           Clear Text
         </button>
-        <button className="btn btn-primary mx-2" onClick={CopyToClickBoard}>
+        <button className={`btn btn-${props.buttoncolor} mx-2`} onClick={CopyToClickBoard}>
           Copy To click board
         </button>
-        <button className="btn btn-primary mx-2" onClick={RemoveExtraSpaces}>
+        <button className={`btn btn-${props.buttoncolor} mx-2`} onClick={RemoveExtraSpaces}>
           Remove Extra Spaces
         </button>
-        <button className="btn btn-primary mx-2" onClick={Reversethestring}>
+        <button className={`btn btn-${props.buttoncolor} mx-2`} onClick={Reversethestring}>
           Reverse The String{" "}
         </button>
       </div>
@@ -105,7 +105,7 @@ export default function Textform(props) {
 
         <h4>Your Text Summary:</h4>
         <p>
-          {text.split(" ").length} words and {text.length} characters
+          {text.split(" ").length - 1 } words and {text.length} characters
         </p>
         {/* here we need 1 minutes to read 125 words, so 1/25 is 0.008 , so we calculate no of words * 0.008 so we can get 
         no of minutes to read that sentence */}
