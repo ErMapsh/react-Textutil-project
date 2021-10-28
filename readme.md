@@ -52,3 +52,12 @@ want to change") >
 ## In Excercise1
 - i add copy to clipboard system in our web application
 - using state varible (type of hook) we can develop a web app
+
+## in Excercise 2
+- Dark mode enable disable fuction using hooks
+- add some fuction in textfrom
+- modified dark theme
+- Adding + Auto Dismissing Alert Messages
+- adding different themse and do small change in realeted to No of words in text
+- Changing title dynamically & adding favicons to TextUtils
+- React Router Setup (exact path is good way in ur app for ur endpoint)

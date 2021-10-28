@@ -1,8 +1,9 @@
 import Navbar from "./components/Navbar";
 import Textform from "./components/Textform";
 import About from "./components/About";
-import React, { useState } from "react";
 import Alert from "./components/Alert";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   const [mode, setmode] = useState("light"); //whether dark mode in enable or not
@@ -29,20 +30,18 @@ function App() {
       setmode("dark");
       document.body.style.background = "#352164";
       document.body.style.color = "white";
-      showAlert("Dark Mode❤ Enable", "success") //we can change title dyanamically
+      showAlert("Dark Mode❤ Enable", "success"); //we can change title dyanamically
 
       setInterval(() => {
-        document.title =  "TextUtils-Dark Mode❤"
+        document.title = "TextUtils-Dark Mode❤";
       }, 1500);
-      
+
       setInterval(() => {
-        document.title =  "Textile-Home"
+        document.title = "Textile-Home";
       }, 1000);
 
-
       setbuttoncolor("light");
-    } 
-    else if (mode == "dark") {
+    } else if (mode === "dark") {
       setmode("light");
       document.body.style.background = "white";
       document.body.style.color = "black";
@@ -53,13 +52,12 @@ function App() {
 
   const Red = () => {
     if (mode === "light" || "Yellow" || "Green" || "dark") {
-      setmode("dark");
+      setmode("Red");
       document.body.style.background = "#dc3545";
       document.body.style.color = "white";
       showAlert("Red mode Enable", "success");
       setbuttoncolor("warning");
-    }
-    else {
+    } else {
       setmode("light");
       document.body.style.background = "white";
       document.body.style.color = "black";
@@ -70,7 +68,7 @@ function App() {
 
   const Yellow = () => {
     if (mode === "light" || "Green" || "Red" || "dark") {
-      setmode("dark");
+      setmode("Yellow");
       document.body.style.background = "#ffc107";
       document.body.style.color = "black";
       showAlert("Yellow mode Enable", "success");
@@ -86,7 +84,7 @@ function App() {
 
   const Green = () => {
     if (mode === "light" || "Red" || "Yellow" || "dark") {
-      setmode("dark");
+      setmode("Green");
       document.body.style.background = "#198754";
       document.body.style.color = "black";
       showAlert("Green mode Enable", "success");
@@ -102,22 +100,27 @@ function App() {
 
   return (
     <div>
-      <Navbar
-        title="UsingProp"
-        about="Disabled1"
-        mode={mode}
-        togglemode={togglemode}
-        green={Green}
-        red={Red}
-        yellow={Yellow}
-      />
-      <Alert alert={alert} showAlert={showAlert} />
-      <Textform
-        heading="Enter Text to Analyze Below"
-        showAlert={showAlert}
-        buttoncolor={buttoncolor}
-      />
-      <About />
+      <Router>
+        <Navbar
+          title="UsingProp"
+          about="Disabled1"
+          mode={mode}
+          togglemode={togglemode}
+          green={Green}
+          red={Red}
+          yellow={Yellow}
+        />
+        <Alert alert={alert} showAlert={showAlert} />
+        <Switch>
+          <Route exact path="/about">
+            <About />
+          </Route>
+
+          <Route exact path="/">
+            <Textform heading="Enter Text to Analyze Below" showAlert={showAlert} buttoncolor={buttoncolor}  />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
