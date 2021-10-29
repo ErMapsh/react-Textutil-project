@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import a from "E:/study/code with harry/React js/myreactapp/src/App.css";
-
 
 export default function Navbar(props) {
   let mycolor = { color: "white" };
@@ -11,11 +10,11 @@ export default function Navbar(props) {
       className={`navbar navbar-expand-lg navbar-${props.mode} bg-dark px-3`}
     >
       <div className="container-fluid">
-        {/* <Link className="navbar-brand nav-link" to="/" style={mycolor}> */}
-        <a className="navbar-brand nav-link" href="#" style={mycolor}>
+        {/* <a className="navbar-brand nav-link" href="#" style={mycolor}> */}{/* for deployement */}
+        <Link className="navbar-brand nav-link" to="/" style={mycolor}>
           {" "}
           {props.title}{" "}
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -30,19 +29,19 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a
+              <Link
                 className="nav-link active "
                 aria-current="page"
                 to="/"
                 style={mycolor}
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              {/* <Link className="nav-link" to="/about" style={mycolor}>
+              <Link className="nav-link" to="/about" style={mycolor}>
                 About
-              </Link> */}
+              </Link>
             </li>
 
             {/* {<li className="nav-item dropdown">
@@ -57,9 +56,9 @@ export default function Navbar(props) {
                 </ul>
               </li> } */}
 
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <a className="nav-link disabled">{props.about}</a>
-            </li>
+            </li> */}
           </ul>
 
           <div

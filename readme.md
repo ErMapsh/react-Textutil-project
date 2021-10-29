@@ -64,5 +64,8 @@ want to change") >
 
 
 ## NPM Deployment in github or free hosting
-- https://www.youtube.com/watch?v=Fi75tq9JikI&list=PLu0W_9lII9agx66oZnT6IyhcMIbUMNMdt&index=17&t=4s
-- https://cra.link/deployment
+- [yt video](https://www.youtube.com/watch?v=Fi75tq9JikI&list=PLu0W_9lII9agx66oZnT6IyhcMIbUMNMdt&index=17&t=4s)
+- [deployment site](https://cra.link/deployment)
+
+## hosting using digital ocen
+- [yt video of hosting] (https://www.youtube.com/watch?v=YYVY1bPHaWE&list=PLu0W_9lII9agx66oZnT6IyhcMIbUMNMdt&index=18) 

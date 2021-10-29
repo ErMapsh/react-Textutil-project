@@ -1,9 +1,9 @@
 import Navbar from "./components/Navbar";
 import Textform from "./components/Textform";
-// import About from "./components/About";
+import About from "./components/About";
 import Alert from "./components/Alert";
 import React, { useState } from "react";
-// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
 function App() {
@@ -90,7 +90,7 @@ function App() {
 
   return (
     <div>
-      {/* <Router> */}
+      <Router>
         <Navbar
           title="TextUtils"
           about="Disabled1"
@@ -101,16 +101,16 @@ function App() {
           mode={mode}
         />
         <Alert alert={alert} showAlert={showAlert} />
-        {/* <Switch>
+        <Switch>
           <Route exact path="/about">
             <About />
-          </Route> */}
+          </Route>
 
-          {/* <Route exact path="/"> */}
+          <Route exact path="/">
           <Textform heading="Enter Text to Analyze Below" showAlert={showAlert} buttoncolor={buttoncolor} bodyfontcolor={bodyfontcolor} />
-          {/* </Route> */}
-        {/* </Switch> */}
-      {/* </Router> */}
+          </Route> 
+        </Switch>
+    </Router>
     </div>
   );
 }
