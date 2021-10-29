@@ -1,14 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-
+import a from "E:/study/code with harry/React js/myreactapp/src/App.css";
 export default function Navbar(props) {
+  let mycolor = { color: "white" };
   return (
     <nav
-      className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode} px-3`}
+      className={`navbar navbar-expand-lg navbar-${props.mode} bg-dark px-3`}
     >
       <div className="container-fluid">
-        <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand nav-link" to="/" style={mycolor}>
           {" "}
           {props.title}{" "}
         </Link>
@@ -26,12 +27,17 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
+              <Link
+                className="nav-link active "
+                aria-current="page"
+                to="/"
+                style={mycolor}
+              >
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/about">
+              <Link className="nav-link" to="/about" style={mycolor}>
                 About
               </Link>
             </li>
@@ -75,9 +81,9 @@ export default function Navbar(props) {
 
           {/* <div className="form-check form-switch" onClick={darkModeEnableDisable} > */}
           <div
-            className={`form-check form-switch text-${
-              props.mode === "light" ? "dark" : "light"
-            }`}
+            className={`form-check form-switch text-
+            // ${props.mode === "light" ? "dark" : "light"}
+            `}
           >
             <input
               className="form-check-input"
@@ -89,6 +95,7 @@ export default function Navbar(props) {
             <label
               className="form-check-label"
               forhtml="flexSwitchCheckDefault"
+              style={mycolor}
             >{`Enable ${props.mode} Mode`}</label>
           </div>
 

@@ -10,14 +10,16 @@ export default function Textform(props) {
     setText(event.target.value);
   };
 
+  //for all buttons
+
   //for uppercase
   const handleUpClick = (event) => {
-    setText("You have clicked on handleUpClick");
-    let Upcase = text.toUpperCase();
-    setText(Upcase);
-    props.showAlert("Converted to uppercase", "success");
-    // console.log(`Uppercase was Clicked ${text}`);
-    // console.log(event)
+      // setText("You have clicked on handleUpClick");
+      let Upcase = text.toUpperCase();
+      setText(Upcase);
+      props.showAlert("Converted to uppercase", "success");
+      console.log(`Uppercase was Clicked ${text}`);
+      console.log(event);  
   };
 
   //for lowercase
@@ -58,11 +60,15 @@ export default function Textform(props) {
     setText(joinarray);
     props.showAlert("Reverse The string", "success");
   };
+  //for black color initially:
+  let blackcolor = {
+    color: "black"
+  }
 
   //jsx start
 
   return (
-    <div className={`bg-${props.mode}`}>
+    <div className={`bg-${props.mode}` } style={{color: props.bodyfontcolor}}>
       <div className={`container py-3`}>
         <h1>{props.heading}</h1>
         <div className="mb-3">
