@@ -5,11 +5,14 @@ import Alert from "./components/Alert";
 import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
+
 function App() {
   const [mode, setmode] = useState("light"); //whether dark mode in enable or not
-  const [alert, setalert] = useState(null);
+  const [alert, setalert] = useState(null)
   //for different color need diff state;
-  const [buttoncolor, setbuttoncolor] = useState(null);
+  const [buttoncolor, setbuttoncolor] = useState("primary");
+  //setting up font color for different themes
+  const [bodyfontcolor, setbodyfontcolor] = useState("black")
 
   const showAlert = (message, type) => {
     setalert({
@@ -28,33 +31,35 @@ function App() {
   const togglemode = () => {
     if (mode === "light") {
       setmode("dark");
+      setbodyfontcolor("white")
       document.body.style.background = "#352164";
-      document.body.style.color = "white";
       showAlert("Dark Mode❤ Enable", "success"); //we can change title dyanamically
-
-      setInterval(() => {
-        document.title = "TextUtils-Dark Mode❤";
-      }, 1500);
-
-      setInterval(() => {
-        document.title = "Textile-Home";
-      }, 1000);
-
       setbuttoncolor("light");
-    } else if (mode === "dark") {
+      document.title = "TextUtils-Dark Mode❤";
+
+      // setInterval(() => {
+        //   document.title = "TextUtils-Dark Mode❤";
+      // }, 1500);
+
+      // setInterval(() => {
+      //   document.title = "Textile-Home";
+      // }, 1000);
+
+    } else{
       setmode("light");
+      setbodyfontcolor("black")
       document.body.style.background = "white";
-      document.body.style.color = "black";
       showAlert("Light Mode Enable", "success");
       setbuttoncolor("primary");
     }
   };
 
   const Red = () => {
-    if (mode === "light" || "Yellow" || "Green" || "dark") {
+    if (mode === "light"||"yellow"||"green") {
       setmode("Red");
       document.body.style.background = "#dc3545";
-      document.body.style.color = "white";
+      // document.body.style.color = "white";
+      setbodyfontcolor("black")
       showAlert("Red mode Enable", "success");
       setbuttoncolor("warning");
     } else {
@@ -63,14 +68,16 @@ function App() {
       document.body.style.color = "black";
       showAlert("Light Mode Enable", "success");
       setbuttoncolor("primary");
+      setbodyfontcolor("black")
     }
-  };
+  }
 
   const Yellow = () => {
-    if (mode === "light" || "Green" || "Red" || "dark") {
+    if (mode === "light"||"red"||"green") {
       setmode("Yellow");
       document.body.style.background = "#ffc107";
-      document.body.style.color = "black";
+      // document.body.style.color = "black";
+      setbodyfontcolor("black")
       showAlert("Yellow mode Enable", "success");
       setbuttoncolor("danger");
     } else {
@@ -79,14 +86,16 @@ function App() {
       document.body.style.color = "black";
       showAlert("Light Mode Enable", "success");
       setbuttoncolor("primary");
+      setbodyfontcolor("white")
     }
   };
 
   const Green = () => {
-    if (mode === "light" || "Red" || "Yellow" || "dark") {
+    if (mode === "light"||"yellow"||"red") {
       setmode("Green");
       document.body.style.background = "#198754";
-      document.body.style.color = "black";
+      // document.body.style.color = "white";
+      setbodyfontcolor("white")
       showAlert("Green mode Enable", "success");
       setbuttoncolor("secondary");
     } else {
@@ -95,6 +104,7 @@ function App() {
       document.body.style.color = "black";
       showAlert("Light Mode Enable", "success");
       setbuttoncolor("primary");
+      setbodyfontcolor("white")
     }
   };
 
@@ -104,11 +114,11 @@ function App() {
         <Navbar
           title="UsingProp"
           about="Disabled1"
-          mode={mode}
           togglemode={togglemode}
           green={Green}
           red={Red}
           yellow={Yellow}
+          mode={mode}
         />
         <Alert alert={alert} showAlert={showAlert} />
         <Switch>
@@ -117,7 +127,7 @@ function App() {
           </Route>
 
           <Route exact path="/">
-            <Textform heading="Enter Text to Analyze Below" showAlert={showAlert} buttoncolor={buttoncolor}  />
+            <Textform heading="Enter Text to Analyze Below" showAlert={showAlert} buttoncolor={buttoncolor} bodyfontcolor={bodyfontcolor} />
           </Route>
         </Switch>
       </Router>
