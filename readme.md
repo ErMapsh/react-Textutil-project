@@ -61,3 +61,8 @@ want to change") >
 - adding different themse and do small change in realeted to No of words in text
 - Changing title dynamically & adding favicons to TextUtils
 - React Router Setup (exact path is good way in ur app for ur endpoint)
+
+
+## NPM Deployment in github or free hosting
+- https://www.youtube.com/watch?v=Fi75tq9JikI&list=PLu0W_9lII9agx66oZnT6IyhcMIbUMNMdt&index=17&t=4s
+- https://cra.link/deployment

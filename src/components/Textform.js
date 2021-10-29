@@ -61,9 +61,9 @@ export default function Textform(props) {
     props.showAlert("Reverse The string", "success");
   };
   //for black color initially:
-  let blackcolor = {
-    color: "black"
-  }
+  // let blackcolor = {
+  //   color: "black"
+  // }
 
   //jsx start
 
@@ -84,37 +84,37 @@ export default function Textform(props) {
           />
         </div>
         <button
-          className={`btn btn-${props.buttoncolor} mx-2`}
+          className={`btn btn-${props.buttoncolor} mx-4`}
           onClick={handleUpClick}
         >
           Convert to Uppercase
         </button>
         <button
-          className={`btn btn-${props.buttoncolor} mx-2`}
+          className={`btn btn-${props.buttoncolor} mx-4`}
           onClick={handleUpClickLower}
         >
           Convert to Lowercase
         </button>
         <button
-          className={`btn btn-${props.buttoncolor} mx-2`}
+          className={`btn btn-${props.buttoncolor} mx-4`}
           onClick={ClearText}
         >
           Clear Text
         </button>
         <button
-          className={`btn btn-${props.buttoncolor} mx-2`}
+          className={`btn btn-${props.buttoncolor} mx-4`}
           onClick={CopyToClickBoard}
         >
           Copy To click board
         </button>
         <button
-          className={`btn btn-${props.buttoncolor} mx-2`}
+          className={`btn btn-${props.buttoncolor} mx-4`}
           onClick={RemoveExtraSpaces}
         >
           Remove Extra Spaces
         </button>
         <button
-          className={`btn btn-${props.buttoncolor} mx-2`}
+          className={`btn btn-${props.buttoncolor} mx-4`}
           onClick={Reversethestring}
         >
           Reverse The String{" "}
