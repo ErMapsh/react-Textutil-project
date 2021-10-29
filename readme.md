@@ -68,4 +68,4 @@ want to change") >
 - [deployment site](https://cra.link/deployment)
 
 ## hosting using digital ocen
-- [yt video of hosting] (https://www.youtube.com/watch?v=YYVY1bPHaWE&list=PLu0W_9lII9agx66oZnT6IyhcMIbUMNMdt&index=18) 
+- [yt video of hosting](https://www.youtube.com/watch?v=YYVY1bPHaWE&list=PLu0W_9lII9agx66oZnT6IyhcMIbUMNMdt&index=18) 
