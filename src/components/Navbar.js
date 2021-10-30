@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
-// import a from "E:/study/code with harry/React js/myreactapp/src/App.css";
 
 export default function Navbar(props) {
   let mycolor = { color: "white" };
@@ -52,7 +51,9 @@ export default function Navbar(props) {
               >
                 Home
               </Link>
+
             </li>
+
             <li className="nav-item">
               <Link className="nav-link" to="/about" style={mycolor}>
                 About
@@ -81,22 +82,22 @@ export default function Navbar(props) {
             role="group"
             aria-label="Basic mixed styles example"
           >
-            <button type="button" className="btn btn-danger" onClick={props.red}>
+            <button type="button" className="btn btn-danger" onClick={props.red} style={{ cursor: "pointer" }}>
               Red
             </button>
             <button
               type="button"
               className="btn btn-warning"
               onClick={props.yellow}
+              style={{ cursor: "pointer" }}
             >
               Yellow
             </button>
-            <button type="button" className="btn btn-success" onClick={props.green}>
+            <button type="button" className="btn btn-success" onClick={props.green} style={{ cursor: "pointer" }}>
               Green
             </button>
           </div>
 
-          {/* <div className="form-check form-switch" onClick={darkModeEnableDisable} > */}
           <div
             className={`form-check form-switch text-
             // ${props.mode === "light" ? "dark" : "light"}
@@ -108,6 +109,7 @@ export default function Navbar(props) {
               role="switch"
               idname="flexSwitchCheckDefault"
               onClick={props.togglemode}
+              style={{cursor: "pointer"}}
             />
             <label
               className="form-check-label"
