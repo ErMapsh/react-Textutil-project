@@ -10,11 +10,18 @@ export default function Navbar(props) {
       className={`navbar navbar-expand-lg navbar-${props.mode} bg-dark px-3`}
     >
       <div className="container-fluid">
-        {/* <a className="navbar-brand nav-link" href="#" style={mycolor}> */}{/* for deployement */}
+
+        {/* for deployement
+        <a className="navbar-brand nav-link" href="#" style={mycolor}>
+          {" "}{props.title}{" "}
+        </a> */}
+
+
         <Link className="navbar-brand nav-link" to="/" style={mycolor}>
           {" "}
           {props.title}{" "}
         </Link>
+
         <button
           className="navbar-toggler"
           type="button"
@@ -29,6 +36,14 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
+
+              {/* for deployment
+              <a href="#" className="nav-link active"
+                aria-current="page"
+                style={mycolor}
+              >Home
+              </a> */}
+
               <Link
                 className="nav-link active "
                 aria-current="page"
@@ -62,21 +77,21 @@ export default function Navbar(props) {
           </ul>
 
           <div
-            class="btn-group mx-3"
+            className="btn-group mx-3"
             role="group"
             aria-label="Basic mixed styles example"
           >
-            <button type="button" class="btn btn-danger" onClick={props.red}>
+            <button type="button" className="btn btn-danger" onClick={props.red}>
               Red
             </button>
             <button
               type="button"
-              class="btn btn-warning"
+              className="btn btn-warning"
               onClick={props.yellow}
             >
               Yellow
             </button>
-            <button type="button" class="btn btn-success" onClick={props.green}>
+            <button type="button" className="btn btn-success" onClick={props.green}>
               Green
             </button>
           </div>

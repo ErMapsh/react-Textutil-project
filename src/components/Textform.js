@@ -84,37 +84,37 @@ export default function Textform(props) {
           />
         </div>
         <button
-          className={`btn btn-${props.buttoncolor} mx-4`}
+          className={`btn btn-${props.buttoncolor} mx-2 my-1`}
           onClick={handleUpClick}
         >
           Convert to Uppercase
         </button>
         <button
-          className={`btn btn-${props.buttoncolor} mx-4`}
+          className={`btn btn-${props.buttoncolor} mx-2 my-1`}
           onClick={handleUpClickLower}
         >
           Convert to Lowercase
         </button>
         <button
-          className={`btn btn-${props.buttoncolor} mx-4`}
+          className={`btn btn-${props.buttoncolor} mx-2 my-1`}
           onClick={ClearText}
         >
           Clear Text
         </button>
         <button
-          className={`btn btn-${props.buttoncolor} mx-4`}
+          className={`btn btn-${props.buttoncolor} mx-2 my-1`}
           onClick={CopyToClickBoard}
         >
           Copy To click board
         </button>
         <button
-          className={`btn btn-${props.buttoncolor} mx-4`}
+          className={`btn btn-${props.buttoncolor} mx-2 my-1`}
           onClick={RemoveExtraSpaces}
         >
           Remove Extra Spaces
         </button>
         <button
-          className={`btn btn-${props.buttoncolor} mx-4`}
+          className={`btn btn-${props.buttoncolor} mx-2 my-1`}
           onClick={Reversethestring}
         >
           Reverse The String{" "}
@@ -132,13 +132,13 @@ export default function Textform(props) {
 
         <h4>Your Text Summary:</h4>
         <p>
-          {text.split(" ").length - 1} words and {text.length} characters
+          {text.split(" ").filter((element)=>{ return element.length !== 0}).length} words and {text.length} characters
         </p>
         {/* here we need 1 minutes to read 125 words, so 1/25 is 0.008 , so we calculate no of words * 0.008 so we can get 
         no of minutes to read that sentence */}
         <p>
-          We can read {text.split(" ").length} words in
-          {text.split(" ").length * 0.008} Minutes
+          We can read {text.split(" ").filter((element)=>{ return element.length !== 0}).length} words in
+          {text.split(" ").filter((element)=>{ return element.length !== 0}).length * 0.008} Minutes
         </p>
       </div>
     </div>
