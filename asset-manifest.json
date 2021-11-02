@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/react-things-tutorials-/static/css/main.afd7172b.chunk.css",
-    "main.js": "/react-things-tutorials-/static/js/main.9bfe1420.chunk.js",
-    "main.js.map": "/react-things-tutorials-/static/js/main.9bfe1420.chunk.js.map",
-    "runtime-main.js": "/react-things-tutorials-/static/js/runtime-main.7e1e02cc.js",
-    "runtime-main.js.map": "/react-things-tutorials-/static/js/runtime-main.7e1e02cc.js.map",
-    "static/js/2.b159efa2.chunk.js": "/react-things-tutorials-/static/js/2.b159efa2.chunk.js",
-    "static/js/2.b159efa2.chunk.js.map": "/react-things-tutorials-/static/js/2.b159efa2.chunk.js.map",
-    "static/js/3.50b199fe.chunk.js": "/react-things-tutorials-/static/js/3.50b199fe.chunk.js",
-    "static/js/3.50b199fe.chunk.js.map": "/react-things-tutorials-/static/js/3.50b199fe.chunk.js.map",
+    "main.js": "/react-things-tutorials-/static/js/main.2a0edc74.chunk.js",
+    "main.js.map": "/react-things-tutorials-/static/js/main.2a0edc74.chunk.js.map",
+    "runtime-main.js": "/react-things-tutorials-/static/js/runtime-main.3e3048a1.js",
+    "runtime-main.js.map": "/react-things-tutorials-/static/js/runtime-main.3e3048a1.js.map",
+    "static/js/2.41c87c59.chunk.js": "/react-things-tutorials-/static/js/2.41c87c59.chunk.js",
+    "static/js/2.41c87c59.chunk.js.map": "/react-things-tutorials-/static/js/2.41c87c59.chunk.js.map",
+    "static/js/3.a6bfc84e.chunk.js": "/react-things-tutorials-/static/js/3.a6bfc84e.chunk.js",
+    "static/js/3.a6bfc84e.chunk.js.map": "/react-things-tutorials-/static/js/3.a6bfc84e.chunk.js.map",
     "index.html": "/react-things-tutorials-/index.html",
     "static/css/main.afd7172b.chunk.css.map": "/react-things-tutorials-/static/css/main.afd7172b.chunk.css.map",
-    "static/js/2.b159efa2.chunk.js.LICENSE.txt": "/react-things-tutorials-/static/js/2.b159efa2.chunk.js.LICENSE.txt"
+    "static/js/2.41c87c59.chunk.js.LICENSE.txt": "/react-things-tutorials-/static/js/2.41c87c59.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.7e1e02cc.js",
-    "static/js/2.b159efa2.chunk.js",
+    "static/js/runtime-main.3e3048a1.js",
+    "static/js/2.41c87c59.chunk.js",
     "static/css/main.afd7172b.chunk.css",
-    "static/js/main.9bfe1420.chunk.js"
+    "static/js/main.2a0edc74.chunk.js"
   ]
 }
