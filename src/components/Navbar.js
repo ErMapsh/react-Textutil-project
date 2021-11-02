@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   let mycolor = { color: "white" };
@@ -11,15 +11,14 @@ export default function Navbar(props) {
       <div className="container-fluid">
 
         {/* for deployement */}
-        <a className="navbar-brand nav-link" style={mycolor}>
+        {/* <a className="navbar-brand nav-link" style={mycolor}>
           {" "}{props.title}{" "}
-        </a>
+        </a> */}
 
 
-        {/* <Link className="navbar-brand nav-link" to="/" style={mycolor}>
-          {" "}
-          {props.title}{" "}
-        </Link> */}
+        <label className="navbar-brand nav-link" style={mycolor}>
+          {" "}{props.title}{" "}
+        </label>
 
         <button
           className="navbar-toggler"
@@ -37,28 +36,29 @@ export default function Navbar(props) {
             <li className="nav-item">
 
               {/* for deployment */}
-              <a href="#" className="nav-link active"
+
+              {/* <a href="#" className="nav-link active"
                 aria-current="page"
                 style={mycolor}
               >Home
-              </a>
+              </a> */}
 
-              {/* <Link
+              <Link
                 className="nav-link active "
                 aria-current="page"
                 to="/"
                 style={mycolor}
               >
                 Home
-              </Link> */}
+              </Link>
 
             </li>
 
-            {/* <li className="nav-item">
+            <li className="nav-item">
               <Link className="nav-link" to="/about" style={mycolor}>
                 About
               </Link>
-            </li> */}
+            </li>
 
             {/* {<li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
