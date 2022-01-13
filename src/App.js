@@ -6,7 +6,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 
-function App() {
+export default function App() {
   const [mode, setmode] = useState("light"); //whether dark mode in enable or not
   const [alert, setalert] = useState(null)
   //for different color need diff state;
@@ -24,7 +24,7 @@ function App() {
     // we want to reslove this bug, then use this timeout
     setTimeout(() => {
       setalert(null);
-    }, 2000);
+    }, 3000);
   };
 
   //light mode and dark mode logic
@@ -37,13 +37,6 @@ function App() {
       setbuttoncolor("light");
       document.title = "TextUtils-Dark Mode❤";
 
-      // setInterval(() => {
-        //   document.title = "TextUtils-Dark Mode❤";
-      // }, 1500);
-
-      // setInterval(() => {
-      //   document.title = "Textile-Home";
-      // }, 1000);
 
     } else{
       setmode("light");
@@ -102,17 +95,18 @@ function App() {
         />
         <Alert alert={alert} showAlert={showAlert} />
         <Switch>
+          <Route exact path="/">
+            <Textform heading="Enter Text to Analyze Below" showAlert={showAlert} buttoncolor={buttoncolor} bodyfontcolor={bodyfontcolor} />
+          </Route> 
+
           <Route exact path="/about">
             <About />
           </Route>
 
-          <Route exact path="/">
-          <Textform heading="Enter Text to Analyze Below" showAlert={showAlert} buttoncolor={buttoncolor} bodyfontcolor={bodyfontcolor} />
-          </Route> 
+          
         </Switch>
     </Router>
     </div>
   );
 }
 
-export default App;

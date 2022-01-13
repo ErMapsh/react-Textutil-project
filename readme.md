@@ -12,14 +12,14 @@ in this how i learn react js, thats all things are in this md file
 
 Software are use for react js is node js.
 after installing we directly create sample react js application in js
-using [npx create-react-app [folder name]], after that we want to run this
+using [npx create-react-app [folder name]], after that we can run this
 application using [npm start], and application run on localhost
-everytime we use [npm run build] cmd for using nodejs
+everytime, we can use [npm run build] cmd for build production of model/stable model
 
 ## Property and property Types :
 
 Prop are send form app.js to components files
-using shortcut from react extension is easy to implement a code.
+using prefix shotform from react extension is easy to implement a code.
 we can set prop types as like that:
 
 we can set prop-types using Proptyeps module
@@ -38,10 +38,10 @@ title.propTypes: string
 
 
 ## How to set State and change state, Handle Event
-- we use state hookd from react 
-- we cant change state or constant variable like normal varibal, if we wan't to change then use change state updation.
+- we use state hook from react 
+- we cant change state of variable like normal variable, if we wan't to change then use change state updation.
 - like see < const [initialstate, initialstatechanged] = useState("Here this string is default value of initialstate, its may be string, int, float, boolean, object etc.") >
-- we can change initialstatechanged manually like < initialstatechanged("here the something that u
+- we can change initial state changed manually like < initialstatechanged("here the something that u
 want to change") >
 
 ## Adding Logic in UtilsText

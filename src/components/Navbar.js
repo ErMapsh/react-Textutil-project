@@ -9,15 +9,14 @@ export default function Navbar(props) {
       className={`navbar navbar-expand-lg navbar-${props.mode} bg-dark px-3`}
     >
       <div className="container-fluid">
-
         {/* for deployement */}
         {/* <a className="navbar-brand nav-link" style={mycolor}>
           {" "}{props.title}{" "}
         </a> */}
 
-
         <label className="navbar-brand nav-link" style={mycolor}>
-          {" "}{props.title}{" "}
+          {" "}
+          {props.title}{" "}
         </label>
 
         <button
@@ -34,7 +33,6 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-
               {/* for deployment */}
 
               {/* <a href="#" className="nav-link active"
@@ -51,7 +49,6 @@ export default function Navbar(props) {
               >
                 Home
               </Link>
-
             </li>
 
             <li className="nav-item">
@@ -59,22 +56,6 @@ export default function Navbar(props) {
                 About
               </Link>
             </li>
-
-            {/* {<li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a className="dropdown-item" href="/">About</a></li>
-                  <li><a className="dropdown-item" href="/">Another action</a></li>
-                  <li><hr className="dropdown-divider" /></li>
-                  <li><a className="dropdown-item" href="/">Something else here</a></li>
-                </ul>
-              </li> } */}
-
-            {/* <li className="nav-item">
-              <a className="nav-link disabled">{props.about}</a>
-            </li> */}
           </ul>
 
           <div
@@ -82,7 +63,12 @@ export default function Navbar(props) {
             role="group"
             aria-label="Basic mixed styles example"
           >
-            <button type="button" className="btn btn-danger" onClick={props.red} style={{ cursor: "pointer" }}>
+            <button
+              type="button"
+              className="btn btn-danger"
+              onClick={props.red}
+              style={{ cursor: "pointer" }}
+            >
               Red
             </button>
             <button
@@ -93,7 +79,12 @@ export default function Navbar(props) {
             >
               Yellow
             </button>
-            <button type="button" className="btn btn-success" onClick={props.green} style={{ cursor: "pointer" }}>
+            <button
+              type="button"
+              className="btn btn-success"
+              onClick={props.green}
+              style={{ cursor: "pointer" }}
+            >
               Green
             </button>
           </div>
@@ -109,7 +100,7 @@ export default function Navbar(props) {
               role="switch"
               idname="flexSwitchCheckDefault"
               onClick={props.togglemode}
-              style={{cursor: "pointer"}}
+              style={{ cursor: "pointer" }}
             />
             <label
               className="form-check-label"
